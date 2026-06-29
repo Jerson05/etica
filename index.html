@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brújula Ética — HUM-010</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+        <button class="lb-close" onclick="closeLightbox()">✕</button>
+        <img id="lb-img" src="" alt="">
+        <div id="lb-caption"></div>
+    </div>
+
+    <nav>
+        <div style="display:flex;align-items:baseline;">
+            <div class="nav-logo">Brújula <span>Ética</span></div>
+            <div class="nav-sub">// HUM-010 · 2026-I</div>
+        </div>
+        <ul class="nav-links">
+            <li><a onclick="goTo('inicio',this)" class="active">Inicio</a></li>
+            <li><a onclick="goTo('equipo',this)">Equipo</a></li>
+            <li><a onclick="goTo('manifiesto',this)">Manifiesto</a></li>
+            <li><a onclick="goTo('podcast',this)">Podcast</a></li>
+            <li><a onclick="goTo('videoreaccion',this)">Video-reacción</a></li>
+            <li><a onclick="goTo('infografia',this)">Infografía</a></li>
+        </ul>
+    </nav>
+
+    <!-- ═══════════════════════════════ INICIO ═══════════════════════════════ -->
+    <section id="inicio">
+        <div style="max-width:880px;position:relative;z-index:2;">
+            <div class="hero-badge">Portafolio Digital · Ética y Deontología Profesional</div>
+            <div class="hero-title">Brújula<br><em>Ética</em></div>
+            <div class="hero-subtitle">Identidad ética profesional en ingeniería</div>
+            <div class="hero-divider">
+                <div class="hero-divider-line"></div>
+                <div class="hero-divider-dot"></div>
+            </div>
+            <p class="hero-desc">Este portafolio documenta nuestro recorrido ético a lo largo del semestre: desde la
+                construcción de nuestra identidad profesional hasta el compromiso con las generaciones futuras y el
+                entorno.</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <div class="hero-meta-label">Curso</div>
+                    <div class="hero-meta-val">Ética y Deontología Profesional</div>
+                </div>
+                <div class="hero-meta-item">
+                    <div class="hero-meta-label">Carrera</div>
+                    <div class="hero-meta-val">Ingeniería Empresarial y de Sistemas</div>
+                </div>
+                <div class="hero-meta-item">
+                    <div class="hero-meta-label">Semestre</div>
+                    <div class="hero-meta-val">2026-I</div>
+                </div>
+                <div class="hero-meta-item">
+                    <div class="hero-meta-label">Docente</div>
+                    <div class="hero-meta-val">Rolando Espiritu Criales</div>
+                </div>
+            </div>
+            <div class="hero-code-tag">Explorar el portafolio <span>→</span></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ EQUIPO ═══════════════════════════════ -->
+    <section id="equipo">
+        <div class="sec-header">
+            <div class="sec-tag">Nuestro equipo</div>
+            <div class="sec-title">Quiénes <em>somos</em></div>
+            <div class="sec-lead">Cuatro estudiantes comprometidos con una práctica profesional íntegra, responsable y
+                consciente de su impacto en la sociedad peruana.</div>
+        </div>
+        <div class="team-grid">
+
+            <!-- ── Tarjeta 1 ── -->
+            <div class="team-card">
+                <!-- IMAGEN: reemplaza "fotos/ayarza.jpg" con la ruta de tu archivo -->
+                <div class="team-photo">
+                    <div class="team-photo-placeholder">AA</div>
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Ayarza Alvarez Luis Antony</div>
+                    <div class="team-career">Ing. Empresarial y de Sistemas</div>
+                    <div class="team-bio">Interés por la tecnología, guiado por la paciencia y la disciplina. Aporta al
+                        equipo creatividad.</div>
+                    <a class="team-li" href="https://www.linkedin.com/in/luis-ayarza-alvarez-138a01318/"
+                        target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- ── Tarjeta 2 ── -->
+            <div class="team-card">
+                <!-- IMAGEN: reemplaza "fotos/condor.jpg" con la ruta de tu archivo -->
+                <div class="team-photo">
+                    <div class="team-photo-placeholder">CC</div>
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Condor Camarena Luis Fernando</div>
+                    <div class="team-career">Ing. Empresarial y de Sistemas</div>
+                    <div class="team-bio">Interés por el fútbol, la tecnología y la música, guiado por la justicia y la
+                        empatía. Aporta al equipo comunicación.</div>
+                    <a class="team-li" href="https://www.linkedin.com/in/luis-condor-camarena-972b0133a/"
+                        target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- ── Tarjeta 3 ── -->
+            <div class="team-card">
+                <!-- IMAGEN: reemplaza "fotos/giraldo.jpg" con la ruta de tu archivo -->
+                <div class="team-photo">
+                    <div class="team-photo-placeholder">GD</div>
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Giraldo De La Cruz Jeison Jesús</div>
+                    <div class="team-career">Ing. Empresarial y de Sistemas</div>
+                    <div class="team-bio">Interés por la música, el baile y la tecnología, motivado por valores como la
+                        justicia y el bien común.</div>
+                    <a class="team-li" href="https://www.linkedin.com/in/jeison-jesus-giraldo-de-la-cruz-0d1gj02a9"
+                        target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- ── Tarjeta 4 ── -->
+            <div class="team-card">
+                <!-- IMAGEN: reemplaza "fotos/laura.jpg" con la ruta de tu archivo -->
+                <div class="team-photo">
+                    <div class="team-photo-placeholder">LV</div>
+                </div>
+                <div class="team-info">
+                    <div class="team-name">Laura Valerio Jerson Daniel</div>
+                    <div class="team-career">Ing. Empresarial y de Sistemas</div>
+                    <div class="team-bio">Interés por el fútbol, los juegos y la tecnología, guiado por la
+                        responsabilidad y la honestidad.</div>
+                    <a class="team-li" href="https://www.linkedin.com/in/jerson-laura-valerio-a8980524b"
+                        target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ MANIFIESTO ═══════════════════════════════ -->
+    <section id="manifiesto">
+        <div class="manifesto-layout">
+            <div class="manifesto-sidebar">
+                <div class="sec-tag">Módulo I · Semana 5</div>
+                <div class="sec-title">Manifiesto de<br><em>Identidad Ética</em></div>
+                <div class="sec-lead">Declaración de propósito profesional: quiénes somos, qué valores nos guían y a
+                    quiénes nos comprometemos a proteger.</div>
+                <div class="manifesto-values">
+                    <div
+                        style="font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-top:14px;font-family:'DM Mono',monospace;">
+                        Jerarquía de valores (Scheler)</div>
+                    <div class="value-item">
+                        <div class="value-rank">I</div>
+                        <div>
+                            <div class="value-name">Vitales</div>
+                            <div class="value-type">Salud, bienestar, vida</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-rank">II</div>
+                        <div>
+                            <div class="value-name">Espirituales</div>
+                            <div class="value-type">Verdad, belleza, justicia</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-rank">III</div>
+                        <div>
+                            <div class="value-name">Económicos</div>
+                            <div class="value-type">Lo útil, lo rentable, lo eficiente</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-rank">IV</div>
+                        <div>
+                            <div class="value-name">Agradable</div>
+                            <div class="value-type">Cómodo, placentero</div>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-rank">V</div>
+                        <div>
+                            <div class="value-name">Sagrado</div>
+                            <div class="value-type">Dios, trascendencia</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMAGEN: reemplaza "imagenes/jerarquia.jpg" con la ruta de tu archivo -->
+                <button class="collage-btn"
+                    onclick="openLightbox('Imagenes/Jerarquias.jpg','Jerarquía de Valores – Scheler')">🖼️ Imagen
+                    Jerarquía</button>
+            </div>
+
+            <div>
+                <div class="manifesto-metaphor">
+                    <div class="manifesto-metaphor-label">◈ Nuestra metáfora artística</div>
+                    <div class="manifesto-metaphor-text">
+                        En el mito de la caverna de Platón, unos prisioneros viven encadenados dentro de una cueva desde
+                        niños. Solo pueden mirar una pared donde ven sombras, hechas por un fuego que está detrás de
+                        ellos. Como nunca han visto otra cosa, creen que esas sombras son la realidad. Un día, uno es
+                        liberado. Al inicio, la luz le molesta y no entiende nada. Poco a poco sale de la cueva y
+                        descubre el mundo real: primero ve reflejos, luego objetos y finalmente el sol. Entonces
+                        entiende que lo que veía antes eran solo sombras. Después regresa a la cueva para contar la
+                        verdad, pero los otros no le creen y piensan que salir lo dañó.
+                        <span class="manifesto-metaphor-quote">"Los ingenieros de sistemas pueden crear o enfrentar
+                            tecnologías que distorsionan la verdad si no son guiados por la ética."</span>
+                    </div>
+                </div>
+
+                <div class="manifesto-block">
+                    <h4>Propósito profesional</h4>
+                    <p>Basado en el concepto de Aristóteles: <em>Telos</em>.</p>
+                    <p>Nuestro propósito es alcanzar los telos de la ingeniería de sistemas. Desarrollar soluciones
+                        tecnológicas que no solo funcionen eficazmente, sino que contribuyan al bien común, la justicia
+                        y el bienestar social.</p>
+                </div>
+
+                <div class="manifesto-block">
+                    <h4>Poblaciones vulnerables que protegemos</h4>
+                    <div class="vuln-tags">
+                        <div class="vuln-tag">Trabajadores con discapacidad</div>
+                        <div class="vuln-tag">Personas mayores</div>
+                        <div class="vuln-tag">Poblaciones rurales</div>
+                    </div>
+                    <!-- IMAGEN: reemplaza "imagenes/collage.jpg" con la ruta de tu archivo -->
+                    <button class="collage-btn"
+                        onclick="openLightbox('Imagenes/collage.jpg','Collage – Poblaciones Vulnerables')"
+                        style="margin-top:10px;">🖼️ Imagen Collage</button>
+                    <p style="margin-top:10px;">Estas poblaciones son relevantes porque muestran quiénes pueden quedar
+                        fuera si la tecnología no se diseña bien. Las personas con discapacidad pueden verse afectadas
+                        si los sistemas no son accesibles, y los adultos mayores pueden perder independencia si no
+                        entienden las interfaces (Bozzini et al., 2021). Del mismo modo, las poblaciones rurales pueden
+                        quedarse atrás por falta de acceso (Valverde et al., 2025).</p>
+                </div>
+
+                <div class="manifesto-block">
+                    <h4>Mapa crítico profesional</h4>
+                    <p>En el ámbito laboral de nuestra carrera, identificamos varias negligencias éticas que afectan
+                        directamente a las personas y al uso responsable de la tecnología. Una de ellas es la mala
+                        gestión de la seguridad de la información, ya que muchas empresas creen que al contratar
+                        servicios externos ya están protegidas, sin verificar realmente si los datos están seguros.</p>
+                    <p>También observamos el desarrollo de sistemas poco accesibles, diseñados sin considerar a personas
+                        con discapacidad, lo que limita su participación y desempeño. Frente a ello, proponemos crear
+                        tecnologías más seguras, inclusivas y accesibles para todos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PODCAST ═══════════════════════════════ -->
+    <section id="podcast">
+        <div class="sec-header">
+            <div class="sec-tag">Módulo II · Semanas 6–7</div>
+            <div class="sec-title">Podcast de<br><em>Dilema Moral</em></div>
+            <div class="sec-lead">Un caso real del contexto peruano analizado desde dos marcos filosóficos: el deber
+                kantiano y el utilitarismo de Mill.</div>
+        </div>
+        <div class="podcast-layout">
+
+            <div>
+                <!-- AUDIO: reemplaza "audios/podcast.mp3" con la ruta de tu archivo -->
+                <audio id="xp-audio">
+                    <source src="Audio/Audio - Podcast de Dilema Moral.mp3" type="audio/mpeg">
+                </audio>
+
+                <div id="xp">
+                    <div id="xp-header">
+                        <div id="xp-disc">
+                            <div id="xp-disc-bg"></div>
+                            <div id="xp-disc-ring"></div>
+                            <div id="xp-disc-center"></div>
+                        </div>
+                        <div id="xp-meta">
+                            <div id="xp-badge">Episodio 01 · Dilema ético profesional</div>
+                            <div id="xp-title">¿Deber o conveniencia? El caso del hackeo al Poder Judicial</div>
+                            <div id="xp-sub">Ing. Empresarial y de Sistemas · 2026-I</div>
+                        </div>
+                    </div>
+                    <div id="xp-wave-wrap"><canvas id="xp-wave"></canvas></div>
+                    <div id="xp-prog-wrap">
+                        <div id="xp-prog-track">
+                            <div id="xp-prog-fill">
+                                <div id="xp-prog-dot"></div>
+                            </div>
+                        </div>
+                        <div id="xp-time">0:00 / 0:00</div>
+                    </div>
+                    <div id="xp-controls">
+                        <button class="xp-btn" onclick="xpSkip(-15)">⏮ 15s</button>
+                        <button id="xp-play" onclick="xpToggle()">
+                            <div id="xp-play-outer"></div>
+                            <div id="xp-play-inner">▶</div>
+                        </button>
+                        <button class="xp-btn" onclick="xpSkip(15)">15s ⏭</button>
+                        <div id="xp-vol">
+                            <span>🔊</span>
+                            <input type="range" min="0" max="1" step="0.05" value="1" oninput="xpVol(this.value)">
+                        </div>
+                    </div>
+                    <div id="xp-error">
+                        ⚠ No se encontró el archivo de audio. Verifica que <code>audios/podcast.mp3</code> exista en tu
+                        carpeta.
+                    </div>
+                </div>
+
+                <div class="podcast-tags-row">
+                    <div class="podcast-tag">Kant · Ética del deber</div>
+                    <div class="podcast-tag">Mill · Utilitarismo</div>
+                    <div class="podcast-tag">Ing. Empresarial y de Sistemas</div>
+                    <div class="podcast-tag">Hackeo al Poder Judicial del Perú</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="podcast-dilema">
+                    <div class="podcast-dilema-label">El dilema analizado</div>
+                    <div class="podcast-dilema-text">"En enero de 2022, el Poder Judicial del Perú sufrió un ataque de
+                        ransomware realizado por el grupo Lockbit 3.0, que comprometió más de 600 GB de información
+                        sensible. Los ingenieros de TI ya habían detectado vulnerabilidades y solicitado presupuesto
+                        para actualizar la infraestructura, pero las autoridades siempre rechazaban las propuestas.
+                        ¿Debe el ingeniero obedecer a sus superiores o insistir y denunciar el riesgo aunque eso afecte
+                        su estabilidad laboral?"</div>
+                </div>
+                <div
+                    style="font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px;font-family:'DM Mono',monospace;">
+                    Contraste teórico</div>
+                <div class="theory-compare">
+                    <div class="theory-card">
+                        <h5>Perspectiva kantiana</h5>
+                        <p>El profesional actuaría guiándose por su deber moral. Debería insistir en que las
+                            vulnerabilidades sean corregidas, porque proteger la información de los ciudadanos es una
+                            responsabilidad ética independiente de las consecuencias personales.</p>
+                    </div>
+                    <div class="theory-card">
+                        <h5>Perspectiva utilitarista</h5>
+                        <p>El profesional evaluaría qué decisión genera el mayor beneficio para la mayoría de personas.
+                            Desde esta perspectiva, insistir en corregir las vulnerabilidades podría justificarse porque
+                            evita posibles daños a miles de ciudadanos y protege servicios esenciales.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ VIDEO-REACCIÓN ═══════════════════════════════ -->
+    <section id="videoreaccion">
+        <div class="sec-header">
+            <div class="sec-tag">Módulo III · Semana 12</div>
+            <div class="sec-title">Video-reacción<br><em>crítico</em></div>
+            <div class="sec-lead">Miramos nuestro propio podcast con ojos más maduros: ¿qué vacíos éticos identificamos?
+                ¿Qué artículos del código deontológico deben humanizarse?</div>
+        </div>
+        <div class="video-layout">
+
+            <!-- VIDEO PLAYER -->
+            <div id="vp">
+                <div id="vp-screen">
+                    <!-- VIDEO: reemplaza "videos/videoreaccion.mp4" con la ruta de tu archivo -->
+                    <video id="vp-video" src="Video/Grupo2_Video-Reacción_Ética_EC2.mp4" preload="metadata"></video>
+
+                    <!-- Overlay de inicio (se oculta al reproducir) -->
+                    <div id="vp-overlay" onclick="vpPlayPause()">
+                        <div id="vp-grid-bg"></div>
+                        <div id="vp-glow"></div>
+                        <div id="vp-overlay-badge">Video-reacción · Módulo III</div>
+                        <div id="vp-rings">
+                            <div id="vp-ring1"></div>
+                            <div id="vp-ring2"></div>
+                            <div id="vp-btn-circle">▶</div>
+                        </div>
+                        <div id="vp-overlay-title">¿Es suficiente el Código de Ética? Una reflexión sobre el caso del
+                            hackeo al Poder Judicial del Perú</div>
+                    </div>
+                </div>
+
+                <!-- BARRA DE CONTROLES CUSTOM -->
+                <div id="vp-controls-bar">
+                    <!-- Barra de progreso -->
+                    <div id="vp-timeline" onclick="vpSeek(event)">
+                        <div id="vp-timeline-fill"></div>
+                        <div id="vp-timeline-dot"></div>
+                    </div>
+
+                    <div id="vp-ctrl-row">
+                        <!-- Play / Pause -->
+                        <button class="vp-btn" id="vp-playpause-btn" onclick="vpPlayPause()"
+                            title="Play / Pause">▶</button>
+
+                        <!-- Skip -->
+                        <button class="vp-btn" onclick="vpSkipSec(-10)" title="Retroceder 10s">⏮ 10s</button>
+                        <button class="vp-btn" onclick="vpSkipSec(10)" title="Adelantar 10s">10s ⏭</button>
+
+                        <!-- Tiempo -->
+                        <span id="vp-timetext">0:00 / 0:00</span>
+
+                        <div style="flex:1;"></div>
+
+                        <!-- Volumen -->
+                        <span style="font-size:0.8rem;">🔊</span>
+                        <input id="vp-vol-slider" type="range" min="0" max="1" step="0.05" value="1"
+                            oninput="vpSetVol(this.value)" title="Volumen">
+
+                        <!-- Pantalla completa -->
+                        <button class="vp-btn" onclick="vpFullscreen()" title="Pantalla completa">⛶</button>
+                    </div>
+                </div>
+
+                <div id="vp-footer">
+                    <div id="vp-footer-title">¿Es suficiente el Código de Ética? Una reflexión sobre el caso del hackeo
+                        al Poder Judicial del Perú</div>
+                    <div id="vp-footer-meta">
+                        <div id="vp-footer-sub">Módulo III · Semana 12 · HUM-010 · 2026-I</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANÁLISIS -->
+            <div>
+                <div class="analysis-item">
+                    <div class="analysis-label">Vacíos normativos identificados</div>
+                    <div class="analysis-text">En el dilema analizado, el Código de Ética del Colegio de Ingenieros del
+                        Perú establece la obligación de proteger el bienestar de la sociedad y comunicar situaciones de
+                        riesgo. Sin embargo, no indica claramente qué debe hacer el profesional cuando sus advertencias
+                        son ignoradas por la institución. Tampoco contempla de manera específica situaciones
+                        relacionadas con la ciberseguridad, la protección de datos o el impacto que estas problemáticas
+                        pueden tener sobre poblaciones vulnerables.</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">Tensiones ético-legales</div>
+                    <div class="analysis-text">El ingeniero enfrenta un conflicto entre obedecer las decisiones de sus
+                        superiores y cumplir con su responsabilidad profesional de proteger a la sociedad. Esto genera
+                        una tensión entre la obediencia institucional y la conciencia ética del profesional.</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">Propuesta de humanización</div>
+                    <div class="analysis-text">Proponemos reformular los artículos 14 y 29.a del Código de Ética para
+                        que incluyan la obligación de documentar riesgos relevantes, insistir de manera responsable
+                        cuando existan amenazas importantes para la sociedad y considerar el impacto de las decisiones
+                        sobre poblaciones vulnerables.</div>
+                </div>
+                <div class="analysis-item">
+                    <div class="analysis-label">Reflexión sobre presión de decisión</div>
+                    <div class="analysis-text">La presión institucional puede influir significativamente en las
+                        decisiones del profesional. Según Max Weber, el ingeniero se encuentra entre la ética de la
+                        convicción y la ética de la responsabilidad. Desde la perspectiva de Emmanuel Levinas, la
+                        responsabilidad ética surge frente al otro y a las personas que pueden verse afectadas por
+                        nuestras decisiones.</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ INFOGRAFÍA ═══════════════════════════════ -->
+    <section id="infografia">
+        <div class="sec-header">
+            <div class="sec-tag">Módulo IV · Semanas 13–15</div>
+            <div class="sec-title">Infografía de<br><em>Integridad y Sostenibilidad</em></div>
+            <div class="sec-lead">Una sola pieza visual con dos capas integradas: el cuidado del otro y la
+                responsabilidad con las generaciones futuras.</div>
+        </div>
+        <div class="infografia-single">
+            <div class="infografia-single-header">
+                <div>
+                    <div class="infografia-single-title">Infografía de Integridad y Sostenibilidad</div>
+                    <div class="infografia-single-sub">Grupo Ctrl + Ética // HUM-010 // 2026-I</div>
+                </div>
+                <div style="display:flex;gap:8px;">
+                    <div class="capa-pill capa-pill-1">Capa 1 · Cuidado</div>
+                    <div class="capa-pill capa-pill-2">Capa 2 · Ambiente</div>
+                </div>
+            </div>
+
+            <!-- CARRUSEL: reemplaza "imagenes/capa1.jpg" y "imagenes/capa2.jpg" con la ruta de tus archivos -->
+            <div class="infografia-carousel-wrap">
+                <div id="infografiaCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#infografiaCarousel" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Capa 1"></button>
+                        <button type="button" data-bs-target="#infografiaCarousel" data-bs-slide-to="1"
+                            aria-label="Capa 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Imagenes/Collage_Mejorado.png" alt="Capa 1 – Ética del cuidado">
+                            <div class="carousel-caption">
+                                <span class="capa-caption-badge capa-caption-1">Capa 1 · Cuidado</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Imagenes/meme.png" alt="Capa 2 – Ecoética">
+                            <div class="carousel-caption">
+                                <span class="capa-caption-badge capa-caption-2">Capa 2 · Ambiente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#infografiaCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#infografiaCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="infografia-info">
+                <div class="infografia-info-col">
+                    <div class="info-col-label info-col-label-1">◈ Capa 1 · Semana 13 · Ética del cuidado</div>
+                    <div class="info-col-text">La imagen representa a tres grupos que son muy afectados por la brecha
+                        digital en el Perú. Las personas con discapacidad, adultos mayores y poblaciones que viven en
+                        zonas rurales. Y aunque la tecnología puede mejorar significativamente su calidad de vida,
+                        muchas veces estas poblaciones enfrentan barreras para acceder al servicio. Problemas como
+                        conectividad, capacitación y disponibilidad de recursos, solo limitan su participación en la
+                        sociedad actual, donde todo se está digitalizando.</div>
+                    <div class="compromiso-tag ct-1" style="margin-top:10px;">Compromiso: Como futuros profesionales de
+                        Ingeniería Empresarial y de Sistemas, asumimos el compromiso de desarrollar soluciones
+                        tecnológicas que sean accesibles, inclusivas y que se adapten a las necesidades reales de estas
+                        poblaciones. Siguiendo a Emmanuel Levinas, creemos que al reconocer las dificultades de otras
+                        personas, debemos actuar con respeto, solidaridad y compromiso para ayudarlas. Y de igual
+                        manera, desde la ética del cuidado de Carol Gilligan, entendemos que una tecnología
+                        verdaderamente ética debe crearse teniendo en cuenta las relaciones humanas, la empatía y las
+                        necesidades de los que se encuentran en situación vulnerable.</div>
+                </div>
+                <div class="infografia-info-col">
+                    <div class="info-col-label info-col-label-2">◈ Capa 2 · Semana 14 · Ecoética</div>
+                    <div class="info-col-text">Imagen generada con IA que une la población vulnerable con el conflicto
+                        ambiental, planteando nuestro compromiso de responsabilidad con las generaciones futuras.</div>
+                    <div class="compromiso-tag ct-2" style="margin-top:10px;">Compromiso: [Redactar compromiso
+                        generacional]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ REFERENCIAS ═══════════════════════════════ -->
+    <section id="referencias" style="min-height:unset;padding:60px 80px;">
+        <div class="sec-header" style="margin-bottom:28px;">
+            <div class="sec-tag">Fuentes académicas</div>
+            <div class="sec-title">Referencias</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:860px;">
+            <div class="ref-item">Ramos Villavicencio, L. A., et al. (2025). Impacto global del Reglamento General de
+                Protección de Datos. <em>HOLOPRAXIS, 9</em>(2), 386–402. <a
+                    href="https://doi.org/10.61154/holopraxis.v9i2.4177"
+                    target="_blank">https://doi.org/10.61154/holopraxis.v9i2.4177</a></div>
+            <div class="ref-item">Giannelli Bozzini, C., et al. (2021). Adultos mayores y tecnología. <em>XIII Congreso
+                    Internacional de Investigación y Práctica Profesional en Psicología.</em> UBA. <a
+                    href="https://www.aacademica.org/000-012/966"
+                    target="_blank">https://www.aacademica.org/000-012/966</a></div>
+            <div class="ref-item">Valverde Medina, J. M., et al. (2025). El uso de las TIC en contextos rurales.
+                <em>Sage Sphere in Artificial Intelligence, 3</em>(1), 1–12. <a href="https://doi.org/10.63688/tg4djt53"
+                    target="_blank">https://doi.org/10.63688/tg4djt53</a>
+            </div>
+            <div class="ref-item">Ríos, J. (2024). La brecha digital en zonas rurales. <em>Gobierno Digital.</em> <a
+                    href="https://gobiernodigital.pe/noticias/la-brecha-digital-en-zonas-rurales/"
+                    target="_blank">https://gobiernodigital.pe/noticias/la-brecha-digital-en-zonas-rurales/</a></div>
+            <div class="ref-item">Kant, I. <em>Ética kantiana.</em></div>
+            <div class="ref-item">Mill, J. S. <em>El utilitarismo.</em></div>
+            <div class="ref-item">Weber, M. <em>Ética de la convicción y ética de la responsabilidad.</em></div>
+            <div class="ref-item">Colegio de Ingenieros del Perú. (2012). <em>Código de ética del Colegio de
+                    Ingenieros del Perú.</em> CIP. <a
+                    href="https://www.cip.org.pe/publicaciones/reglamentosCNCD2018/codigo_de_etica_del_cip.pdf"
+                    target="_blank">https://www.cip.org.pe/publicaciones/reglamentosCNCD2018/codigo_de_etica_del_cip.pdf</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="footer-brand">Brújula <span>Ética</span></div>
+            <div style="margin-top:5px;font-size:0.68rem;color:var(--muted);font-family:'DM Mono',monospace;">Portafolio
+                Digital // HUM-010 // Universidad Científica del Sur // 2026-I</div>
+        </div>
+        <div style="font-size:0.7rem;color:var(--muted);font-family:'DM Mono',monospace;line-height:1.7;">
+            Elaborado por: Grupo Ctrl + Ética<br>
+            Docente: Rolando Espiritu Criales
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
