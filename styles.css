@@ -358,7 +358,7 @@ section:nth-child(even) { background: rgba(20,27,36,0.7); }
 .capa-pill-1 { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid var(--border); }
 .capa-pill-2 { background: rgba(26,184,160,0.1);  color: #5dd6c4; border: 1px solid rgba(26,184,160,0.3); }
 
-.infografia-carousel-wrap {
+.infografia-static-wrap {
   width: 100%;
   max-width: 1280px;
   aspect-ratio: 1280 / 720;
@@ -368,33 +368,16 @@ section:nth-child(even) { background: rgba(20,27,36,0.7); }
   position: relative;
   overflow: hidden;
 }
-#infografiaCarousel,
-#infografiaCarousel .carousel-inner,
-#infografiaCarousel .carousel-item {
-  width: 100%; height: 100%;
-}
-#infografiaCarousel .carousel-item img {
+.infografia-static-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
 }
-#infografiaCarousel .carousel-control-prev,
-#infografiaCarousel .carousel-control-next {
-  width: 8%;
+.infografia-static-caption {
+  position: absolute;
+  left: 18px; bottom: 18px;
+  display: flex; gap: 8px;
 }
-#infografiaCarousel .carousel-control-prev-icon,
-#infografiaCarousel .carousel-control-next-icon {
-  background-color: rgba(13,17,23,0.55);
-  border-radius: 50%;
-  padding: 18px;
-  background-size: 50%, 50%;
-}
-#infografiaCarousel .carousel-indicators [data-bs-target] {
-  background-color: var(--gold);
-  opacity: 0.4;
-  width: 9px; height: 9px; border-radius: 50%;
-}
-#infografiaCarousel .carousel-indicators .active { opacity: 1; }
 
 .capa-caption-badge {
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
@@ -403,24 +386,9 @@ section:nth-child(even) { background: rgba(20,27,36,0.7); }
   display: inline-block;
   background: rgba(13,17,23,0.55);
   backdrop-filter: blur(4px);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 .capa-caption-1 { color: var(--gold); border: 1px solid rgba(201,168,76,0.5); }
 .capa-caption-2 { color: #5dd6c4; border: 1px solid rgba(26,184,160,0.5); }
-#infografiaCarousel .carousel-caption { bottom: 18px; }
-
-@keyframes capaHighlightPulse {
-  0%   { transform: scale(1);    box-shadow: 0 0 0 rgba(201,168,76,0); }
-  35%  { transform: scale(1.08); box-shadow: 0 0 22px rgba(201,168,76,0.55); }
-  100% { transform: scale(1);    box-shadow: 0 0 0 rgba(201,168,76,0); }
-}
-.capa-caption-badge.capa-caption-highlight { animation: capaHighlightPulse 0.9s ease-out; }
-.capa-caption-2.capa-caption-highlight { animation-name: capaHighlightPulse; }
-.capa-caption-2.capa-caption-highlight { box-shadow: 0 0 22px rgba(26,184,160,0.55); }
-
-.capa-pill { transition: background 0.25s, box-shadow 0.25s, color 0.25s, transform 0.25s; }
-.capa-pill-active.capa-pill-1 { background: rgba(201,168,76,0.28); box-shadow: 0 0 14px rgba(201,168,76,0.5); transform: translateY(-1px); }
-.capa-pill-active.capa-pill-2 { background: rgba(26,184,160,0.25); box-shadow: 0 0 14px rgba(26,184,160,0.45); transform: translateY(-1px); }
 
 .infografia-info     { display: grid; grid-template-columns: 1fr 1fr; }
 .infografia-info-col { padding: 20px 28px; }
@@ -437,7 +405,7 @@ section:nth-child(even) { background: rgba(20,27,36,0.7); }
 /* ─────────────────────────────────────────────────────────────
    REFERENCIAS
 ───────────────────────────────────────────────────────────── */
-.ref-item { background: var(--ink2); border: 1px solid var(--faint); border-left: 2px solid var(--gold); border-radius: 2px; padding: 16px 20px; font-size: 0.8rem; color: var(--muted); line-height: 1.75; }
+.ref-item { background: var(--ink2); border: 1px solid var(--faint); border-left: 2px solid var(--gold); border-radius: 2px; padding: 18px 22px; font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
 .ref-item a { color: var(--gold); text-decoration: none; }
 .ref-item a:hover { text-decoration: underline; }
 
