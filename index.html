@@ -86,7 +86,7 @@
             <div class="team-card">
                 <!-- IMAGEN: reemplaza "fotos/ayarza.jpg" con la ruta de tu archivo -->
                 <div class="team-photo">
-                    <div class="team-photo-placeholder">AA</div>
+                    <div class="team-photo-placeholder"><img src="Imagenes/Ayarza.jfif" alt="Ayarza"></div>
                 </div>
                 <div class="team-info">
                     <div class="team-name">Ayarza Alvarez Luis Antony</div>
@@ -102,7 +102,7 @@
             <div class="team-card">
                 <!-- IMAGEN: reemplaza "fotos/condor.jpg" con la ruta de tu archivo -->
                 <div class="team-photo">
-                    <div class="team-photo-placeholder">CC</div>
+                    <div class="team-photo-placeholder"><img src="Imagenes/Condor.jfif" alt="Condor"></div>
                 </div>
                 <div class="team-info">
                     <div class="team-name">Condor Camarena Luis Fernando</div>
@@ -118,7 +118,7 @@
             <div class="team-card">
                 <!-- IMAGEN: reemplaza "fotos/giraldo.jpg" con la ruta de tu archivo -->
                 <div class="team-photo">
-                    <div class="team-photo-placeholder">GD</div>
+                    <div class="team-photo-placeholder"><img src="Imagenes/Giraldo.jpeg" alt="Giraldo"></div>
                 </div>
                 <div class="team-info">
                     <div class="team-name">Giraldo De La Cruz Jeison Jesús</div>
@@ -134,7 +134,7 @@
             <div class="team-card">
                 <!-- IMAGEN: reemplaza "fotos/laura.jpg" con la ruta de tu archivo -->
                 <div class="team-photo">
-                    <div class="team-photo-placeholder">LV</div>
+                    <div class="team-photo-placeholder"><img src="Imagenes/Laura.jpg" alt="Laura"></div>
                 </div>
                 <div class="team-info">
                     <div class="team-name">Laura Valerio Jerson Daniel</div>
@@ -484,40 +484,12 @@
                 </div>
             </div>
 
-            <!-- CARRUSEL: reemplaza "imagenes/capa1.jpg" y "imagenes/capa2.jpg" con la ruta de tus archivos -->
-            <div class="infografia-carousel-wrap">
-                <div id="infografiaCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
-                    data-bs-interval="5000">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#infografiaCarousel" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Capa 1"></button>
-                        <button type="button" data-bs-target="#infografiaCarousel" data-bs-slide-to="1"
-                            aria-label="Capa 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="Imagenes/Collage_Mejorado.png" alt="Capa 1 – Ética del cuidado">
-                            <div class="carousel-caption">
-                                <span class="capa-caption-badge capa-caption-1">Capa 1 · Cuidado</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Imagenes/meme.png" alt="Capa 2 – Ecoética">
-                            <div class="carousel-caption">
-                                <span class="capa-caption-badge capa-caption-2">Capa 2 · Ambiente</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#infografiaCarousel"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#infografiaCarousel"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+            <!-- IMAGEN ESTÁTICA: reemplaza "Imagenes/Collage_Mejorado.png" con la ruta de tu archivo -->
+            <div class="infografia-static-wrap">
+                <img src="Imagenes/Junte.png" alt="Infografía de Integridad y Sostenibilidad">
+                <div class="infografia-static-caption">
+                    <span class="capa-caption-badge capa-caption-1">Capa 1 · Cuidado</span>
+                    <span class="capa-caption-badge capa-caption-2">Capa 2 · Ambiente</span>
                 </div>
             </div>
 
@@ -530,6 +502,9 @@
                         muchas veces estas poblaciones enfrentan barreras para acceder al servicio. Problemas como
                         conectividad, capacitación y disponibilidad de recursos, solo limitan su participación en la
                         sociedad actual, donde todo se está digitalizando.</div>
+                    <!-- IMAGEN: reemplaza "Imagenes/Collage_Mejorado.png" con la ruta de tu archivo -->
+                    <button class="collage-btn" style="margin-top:12px;"
+                        onclick="openLightbox('Imagenes/Collage_Mejorado.png','Capa 1 – Ética del cuidado')">🖼️ Capa 1</button>
                     <div class="compromiso-tag ct-1" style="margin-top:10px;">Compromiso: Como futuros profesionales de
                         Ingeniería Empresarial y de Sistemas, asumimos el compromiso de desarrollar soluciones
                         tecnológicas que sean accesibles, inclusivas y que se adapten a las necesidades reales de estas
@@ -541,10 +516,22 @@
                 </div>
                 <div class="infografia-info-col">
                     <div class="info-col-label info-col-label-2">◈ Capa 2 · Semana 14 · Ecoética</div>
-                    <div class="info-col-text">Imagen generada con IA que une la población vulnerable con el conflicto
-                        ambiental, planteando nuestro compromiso de responsabilidad con las generaciones futuras.</div>
-                    <div class="compromiso-tag ct-2" style="margin-top:10px;">Compromiso: [Redactar compromiso
-                        generacional]</div>
+                    <div class="info-col-text">La imagen muestra cómo la tecnología puede convertirse en una herramienta
+                        de inclusión para las personas con discapacidad, los adultos mayores y las comunidades rurales.
+                        Al mismo tiempo, resalta la importancia de utilizar y gestionar responsablemente los
+                        dispositivos electrónicos mediante el reciclaje y el uso de energías limpias, promoviendo un
+                        desarrollo sostenible que beneficie tanto a las personas como al medio ambiente.
+                    </div>
+                    <!-- IMAGEN: reemplaza "Imagenes/Capa 2.png" con la ruta de tu archivo -->
+                    <button class="collage-btn" style="margin-top:12px;"
+                        onclick="openLightbox('Imagenes/Capa 2.png','Capa 2 – Ecoética')">🖼️ Capa
+                        2</button>
+                    <div class="compromiso-tag ct-2" style="margin-top:10px;">Compromiso: Como futuros profesionales de
+                        Ingeniería Empresarial y de Sistemas, asumimos el compromiso de desarrollar soluciones
+                        tecnológicas que favorezcan la inclusión digital sin comprometer el cuidado del ambiente.
+                        Siguiendo a Jonas, entendemos que nuestras decisiones deben proteger el bienestar de las
+                        generaciones futuras. Asimismo, desde la ecoética propuesta por Leff, creemos que el desarrollo
+                        tecnológico debe contribuir tanto a la justicia social como a la sostenibilidad ambiental.</div>
                 </div>
             </div>
         </div>
